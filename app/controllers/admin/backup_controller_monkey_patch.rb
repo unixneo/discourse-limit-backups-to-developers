@@ -72,7 +72,7 @@ Admin::BackupsController.class_eval do
   def check_developer
       @is_developer = false
       if is_developer?(current_user.email)
-        @is_developer = true
+        @is_developer = false
       end
   end
  
