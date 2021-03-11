@@ -12,5 +12,6 @@ PLUGIN_NAME = "discourse-limit-backups-to-developers"
 enabled_site_setting :enable_limit_backups_to_developers
 
 after_initialize do
+   require_relative './app/controllers/admin/backup_controller_monkey_patch'
 end          
 
