@@ -1,0 +1,2 @@
+plugins:
+  enable_limit_backups_to_developers: true
