@@ -2,10 +2,10 @@
 
 # name: discourse-limit-backups-to-developers
 # about: Limit backups to developers
-# version: 0.0.11
+# version: 0.0.111
 # date: 11 March 2021
 # authors: Neo
-# url: https://github.com/unixneo/discourse-limit-backoups-to-developers
+# url: https://github.com/unixneo/discourse-limit-backups-to-developers
 
 PLUGIN_NAME = "discourse-limit-backups-to-developers"
 
