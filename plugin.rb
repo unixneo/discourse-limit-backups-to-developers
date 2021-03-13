@@ -5,7 +5,7 @@
 # version: 0.0.2
 # date: 11 March 2021
 # authors: Neo
-# url: https://github.com/unixneo/discourse-limit-backoups-to-developers
+# url: https://github.com/unixneo/discourse-limit-backups-to-developers
 
 PLUGIN_NAME = "discourse-limit-backups-to-developers"
 #register_asset "stylesheets/hide.css"
