@@ -64,7 +64,8 @@ class Admin::BackupsController < Admin::AdminController
           user_id: current_user.id,
           backup_file_path: url_for(controller: 'backups', action: 'show')
         )
-
+        details[:user_id] = current_user.id if current_user.id
+        StaffActionLogger.new(current_user).log_custom('send_backup_email_link', details)
         render body: nil
       else
         render body: nil, status: 404
@@ -126,6 +127,8 @@ class Admin::BackupsController < Admin::AdminController
         client_id: params.fetch(:client_id),
         publish_to_message_bus: true,
       }
+      details[:user_id] = current_user.id if current_user.id
+      StaffActionLogger.new(current_user).log_custom('restore_from_backup', details)
       BackupRestore.restore!(current_user.id, opts)
     else 
       render_error("Restore Not Permitted Unless Developer")
